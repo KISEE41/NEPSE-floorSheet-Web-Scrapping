@@ -27,12 +27,12 @@ def argument_parser() -> str:
     parser.add_argument(
         "--stock_name",
         type=str,
-        default="(HRL) Himalayan Reinsurance Limited",
+        default="Himalayan Reinsurance Limited / HRL",
         help="Name of the stock",
     )
 
     # Parse the arguments
     args = parser.parse_args()
 
-    # Access the value of the argument and returning it
-    return args.stock_name
+    # returning the arguments
+    return args
