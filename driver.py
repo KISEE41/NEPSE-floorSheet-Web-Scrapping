@@ -40,6 +40,9 @@ def initialize_driver(user_agent: str) -> webdriver:
     for argument in option_arguments:
         options.add_argument(argument)
 
+    # Detach True
+    # options.add_experimental_option("detach", True)
+
     # Initializing the service
     service = Service(ChromeDriverManager().install())
 
@@ -75,7 +78,7 @@ def find_elements(
     """
 
     # Check for the presence of the element on the DOM/Element
-    if check_for == "presenece":
+    if check_for == "presence":
         return WebDriverWait(driver, wait_for).until(
             EC.presence_of_element_located((By.XPATH, xpath))
         )
