@@ -1,4 +1,5 @@
 import time
+import logging
 import pandas as pd
 
 from datetime import datetime
@@ -7,12 +8,28 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.common.exceptions import (
     NoSuchElementException,
     StaleElementReferenceException,
+    WebDriverException,
 )
 
 from driver import initialize_driver, find_elements
 
 from argparser import argument_parser
 
+
+# Initializing the logging class for loggin purpose
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s | %(levelname)s : %(message)s",
+    filename="./logs/logs.log",
+    filemode="a",
+)
+
+with open("./logs/logs.log", "a") as log_file:
+    log_file.write("------------------------------------------------------------")
+    logging.info(f"Log for the date: {datetime.now()}\n")
+
+# User agent used in this script
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 
 # Site that is to be scrapped
 url = "https://www.sharesansar.com/"
@@ -48,11 +65,11 @@ if __name__ == "__main__":
     args = argument_parser()
 
     # Initializing the driver
-    driver = initialize_driver(
-        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
-    )
+    driver = initialize_driver(user_agent=user_agent)
+    logging.info(f"Driver Initialized with user_agent: {user_agent}")
 
     # Accessing the url
+    logging.debug(f"Requsting the site: {url}")
     driver.get(url)
 
     try:
@@ -61,6 +78,7 @@ if __name__ == "__main__":
             driver=driver, xpath="//footer//a[@href='/floorsheet']"
         )
         # Clicking the link
+        logging.debug("Clicking the floorsheet link")
         floorsheet_link.click()
 
         # Waiting for the page to load
@@ -86,6 +104,7 @@ if __name__ == "__main__":
             driver=driver, xpath="//button[@id='btn_flsheet_submit']"
         )
         search_button.click()
+        logging.debug(f"Company share: {args.stock_name} searched Successfull")
 
         # Waiting for the data to be loaded
         time.sleep(5)
@@ -94,10 +113,10 @@ if __name__ == "__main__":
         current_page = 1
 
         # Loop until the pagination next button is disabled
+        logging.info("Processing the table data with paginations")
         while True:
             try:
-                print(f"processing page: {current_page}")
-
+                # print(f"processing page: {current_page}")
                 # Find all the rows within the tbody
                 rows = find_elements(
                     driver=driver,
@@ -118,6 +137,7 @@ if __name__ == "__main__":
                 if "disabled" in next_button.get_attribute("class"):
                     # If the next button is disabled, break the loop
                     print("Page ended, last page read")
+                    logging.info("Last page read")
                     break
 
                 # Click the next button
@@ -129,11 +149,34 @@ if __name__ == "__main__":
 
             except (NoSuchElementException, StaleElementReferenceException) as err:
                 # If no next button is found, break the loop
-                print("Page Ended with exception", err)
+                print(
+                    f"Page Ended with exception at page number {current_page}\n {err}"
+                )
+                logging.error(f"Error encountered at page: {current_page}: \n {err}")
                 break
 
+        logging.info("Extraction Successfull")
+
+    except WebDriverException as err:
+        logging.critical(f"Script run failed with error:\n {err}")
+
     finally:
+        logging.info("Closing the driver")
         driver.quit()
 
+    # Storing the result in csv file
+    logging.info(
+        f"Storing the data in csv file: floorsheet_{datetime.today().date()}.csv"
+    )
     df.to_csv(f"datas/floorsheet_{datetime.today().date()}.csv", index=False)
+
+    # Quitting the driver
+    logging.info("Closing the driver")
     driver.quit()
+
+    # Logs are in append mode
+    # So leaving space to differentiate data from day to day
+    with open("./logs/logs.log", "a") as log_file:
+        log_file.write(
+            "------------------------------------------------------------\n\n\n"
+        )

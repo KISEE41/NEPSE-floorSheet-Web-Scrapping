@@ -28,8 +28,13 @@ def initialize_driver(user_agent: str) -> webdriver:
 
     # Options available and to be used
     option_arguments = [
-        # "--headless=new",
+        "--headless=new",
         "--window-size=1920,1080",
+        "--no-sandbox",
+        "disable-extensions",
+        "--disable-logging",
+        "--disable-dev-shm-usage",
+        "--log-level=3",
         f"user-agent={user_agent}",
     ]
 
