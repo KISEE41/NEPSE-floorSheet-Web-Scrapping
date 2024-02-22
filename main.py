@@ -1,7 +1,13 @@
 import time
 import pandas as pd
 
+from datetime import datetime
+
 from selenium.webdriver.remote.webelement import WebElement
+from selenium.common.exceptions import (
+    NoSuchElementException,
+    StaleElementReferenceException,
+)
 
 from driver import initialize_driver, find_elements
 
@@ -81,19 +87,53 @@ if __name__ == "__main__":
         )
         search_button.click()
 
-        # Find all the rows within the tbody
-        time.sleep(10)
-        rows = find_elements(
-            driver=driver,
-            xpath="//table[@id='myTable']/tbody/tr",
-            multiple_element=True,
-        )
+        # Waiting for the data to be loaded
+        time.sleep(5)
 
-        # process_table_per_page(rows)
+        # Traking the pages that is processed
+        current_page = 1
+
+        # Loop until the pagination next button is disabled
+        while True:
+            try:
+                print(f"processing page: {current_page}")
+
+                # Find all the rows within the tbody
+                rows = find_elements(
+                    driver=driver,
+                    xpath="//table[@id='myTable']/tbody/tr",
+                    multiple_element=True,
+                )
+
+                # Processing the table data
+                process_table_per_page(rows)
+
+                # Find the pagination next button
+                next_button = find_elements(
+                    driver=driver,
+                    xpath="//div[@id='myTable_paginate']//a[@id='myTable_next']",
+                )
+
+                # Check if the next button is enabled
+                if "disabled" in next_button.get_attribute("class"):
+                    # If the next button is disabled, break the loop
+                    print("Page ended, last page read")
+                    break
+
+                # Click the next button
+                current_page += 1
+                next_button.click()
+
+                # Wait for the page to load after clicking the next button
+                time.sleep(3)
+
+            except (NoSuchElementException, StaleElementReferenceException) as err:
+                # If no next button is found, break the loop
+                print("Page Ended with exception", err)
+                break
 
     finally:
         driver.quit()
-        pass
 
-    df.to_csv("data.csv", index=False)
+    df.to_csv(f"datas/floorsheet_{datetime.today().date()}.csv", index=False)
     driver.quit()
