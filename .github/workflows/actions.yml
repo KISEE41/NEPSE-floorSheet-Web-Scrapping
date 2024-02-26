@@ -1,0 +1,43 @@
+name: run main.py
+
+on:
+  schedue:
+    # Run everyday of the month except at saturday at 7PM
+    - cron: 0 19 * * 0-5
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      # checkout the repository content to github runner
+      - name: checkout repo content
+        uses: actions/checkout@v2
+
+      # setting up python
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "Python 3.12.2"
+
+      - name: install python packages
+        run: python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Executing the python script
+      - name: execute the script
+        run: python main.py
+
+      # Generated logs and datas, and commit and push in github
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git congif --local user.name "Github Action"
+          git add -A
+          git diff-index --quiet HEAD || (git commit -a -m "updated logs, and uploaded datas" --allow-empty)
+
+      # Pushing the changes
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          brandh: master
