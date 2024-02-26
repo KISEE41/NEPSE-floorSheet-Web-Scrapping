@@ -1,6 +1,9 @@
 name: run main.py
 
 on:
+  push:
+    branches:
+      - master
   schedule:
     # Run everyday of the month except at saturday at 7PM
     - cron: 0 19 * * 0-5
