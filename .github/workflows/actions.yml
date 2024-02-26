@@ -11,11 +11,11 @@ jobs:
     steps:
       # checkout the repository content to github runner
       - name: checkout repo content
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # setting up python
       - name: setup python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v3
         with:
           python-version: "Python 3.12.2"
 
