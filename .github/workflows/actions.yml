@@ -42,7 +42,7 @@ jobs:
       # Running pytest
       - name: Test with pytest
         run: |
-          pytest
+          pytest main.py
 
       # Executing the python script
       - name: execute the script
