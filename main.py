@@ -24,10 +24,6 @@ logging.basicConfig(
     filemode="a",
 )
 
-with open("./logs/logs.log", "a") as log_file:
-    log_file.write("------------------------------------------------------------")
-    logging.info(f"Log for the date: {datetime.now()}\n")
-
 # User agent used in this script
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 
@@ -63,6 +59,12 @@ def process_table_per_page(elements: WebElement) -> None:
 if __name__ == "__main__":
     # Initializing the argument parser
     args = argument_parser()
+
+    with open("./logs/logs.log", "a") as log_file:
+        log_file.write(
+            "\n\n------------------------------------------------------------"
+        )
+        logging.info(f"Log for the date: {datetime.now()}\n")
 
     # Initializing the driver
     driver = initialize_driver(user_agent=user_agent)
@@ -171,9 +173,9 @@ if __name__ == "__main__":
 
     # Storing the result in csv file
     logging.info(
-        f"Storing the data in csv file: floorsheet_{datetime.today().date()}.csv"
+        f"Storing the data in csv file: floorsheet_{arrow.utcnow().date()}.csv"
     )
-    df.to_csv(f"datas/floorsheet_{datetime.today().date()}.csv", index=False)
+    df.to_csv(f"datas/floorsheet_{arrow.utcnow().date()}.csv", index=False)
     print("Data stored to CSV")
 
     # Quitting the driver
