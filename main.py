@@ -66,6 +66,7 @@ if __name__ == "__main__":
 
     # Initializing the driver
     driver = initialize_driver(user_agent=user_agent)
+    print("Initializing Driver!!!")
     logging.info(f"Driver Initialized with user_agent: {user_agent}")
 
     # Accessing the url
@@ -79,6 +80,7 @@ if __name__ == "__main__":
         )
         # Clicking the link
         logging.debug("Clicking the floorsheet link")
+        print("Floor Sheet site opened.")
         floorsheet_link.click()
 
         # Waiting for the page to load
@@ -114,6 +116,7 @@ if __name__ == "__main__":
 
         # Loop until the pagination next button is disabled
         logging.info("Processing the table data with paginations")
+        print("Processing Table...")
         while True:
             try:
                 # print(f"processing page: {current_page}")
@@ -156,12 +159,14 @@ if __name__ == "__main__":
                 break
 
         logging.info("Extraction Successfull")
+        print("Scrapping Successfull..hurray!!!")
 
     except WebDriverException as err:
         logging.critical(f"Script run failed with error:\n {err}")
 
     finally:
         logging.info("Closing the driver")
+        print("Closing the driver")
         driver.quit()
 
     # Storing the result in csv file
@@ -169,6 +174,7 @@ if __name__ == "__main__":
         f"Storing the data in csv file: floorsheet_{datetime.today().date()}.csv"
     )
     df.to_csv(f"datas/floorsheet_{datetime.today().date()}.csv", index=False)
+    print("Data stored to CSV")
 
     # Quitting the driver
     logging.info("Closing the driver")
