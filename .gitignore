@@ -160,7 +160,7 @@ cython_debug/
 #.idea/
 
 # Ignoring the data generated
-datas/
+# datas/
 
 # Ignoring the log files
-logs/
+# logs/
