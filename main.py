@@ -173,9 +173,9 @@ if __name__ == "__main__":
 
     # Storing the result in csv file
     logging.info(
-        f"Storing the data in csv file: floorsheet_{arrow.utcnow().date()}.csv"
+        f"Storing the data in csv file: floorsheet_{datetime.today().date()}.csv"
     )
-    df.to_csv(f"datas/floorsheet_{arrow.utcnow().date()}.csv", index=False)
+    df.to_csv(f"datas/floorsheet_{datetime.today().date()}.csv", index=False)
     print("Data stored to CSV")
 
     # Quitting the driver
