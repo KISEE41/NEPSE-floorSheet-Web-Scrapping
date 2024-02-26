@@ -16,10 +16,13 @@ jobs:
       # checkout the repository content to github runner
       - name: checkout repo content
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
 
       # setting up python
       - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v3
         with:
           python-version: "3.10"
 
@@ -34,14 +37,14 @@ jobs:
       # Generated logs and datas, and commit and push in github
       - name: commit files
         run: |
-          git config --local user.email "action@github.com"
-          git congif --local user.name "Github Action"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add -A
           git diff-index --quiet HEAD || (git commit -a -m "updated logs, and uploaded datas" --allow-empty)
 
       # Pushing the changes
       - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: master
