@@ -20,7 +20,7 @@ from argparser import argument_parser
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s | %(levelname)s : %(message)s",
-    filename="./logs/logs.log",
+    filename=f"./logs/logs_for_{datetime.now()}.log",
     filemode="a",
 )
 
@@ -169,6 +169,7 @@ if __name__ == "__main__":
     finally:
         logging.info("Closing the driver")
         print("Closing the driver")
+        time.sleep(10)
         driver.quit()
 
     # Storing the result in csv file
@@ -176,11 +177,13 @@ if __name__ == "__main__":
         f"Storing the data in csv file: floorsheet_{datetime.today().date()}.csv"
     )
     df.to_csv(f"datas/floorsheet_{datetime.today().date()}.csv", index=False)
+    time.sleep(5)
     print("Data stored to CSV")
 
     # Quitting the driver
     logging.info("Closing the driver")
     driver.quit()
+    time.sleep(10)
 
     # Logs are in append mode
     # So leaving space to differentiate data from day to day

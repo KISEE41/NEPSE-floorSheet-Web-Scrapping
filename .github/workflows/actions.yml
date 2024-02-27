@@ -1,4 +1,4 @@
-name: run main.py
+name: Web Scrapping
 
 on:
   push:
@@ -11,10 +11,15 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
+    # runs-on: ${{ matrix.os } }
+    # strategy:
+    #   matrix:
+    #     os: [windows-latest, ubuntu-latest, macOS-latest]
+
     steps:
       # checkout the repository content to github runner
-      - name: checkout repo content
+      - name: Checkout Repo Content
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
@@ -44,8 +49,12 @@ jobs:
       #   run: |
       #     pytest main.py
 
+      # Changing the mode to execution for executing the main.py file
+      - name: Granting Execution Permission
+        run: chmod +x main.py
+
       # Executing the python script
-      - name: execute the script
+      - name: Execute The Script
         run: python main.py
 
       # Generated logs and datas, and commit and push in github
@@ -57,7 +66,7 @@ jobs:
           git diff-index --quiet HEAD || (git commit -a -m "updated logs, and uploaded datas" --allow-empty)
 
       # Pushing the changes
-      - name: push changes
+      - name: Push Changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

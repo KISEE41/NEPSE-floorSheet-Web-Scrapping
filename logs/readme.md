@@ -1,0 +1,1 @@
+This folder stores the logs that is being generated while scrapping.

@@ -1,0 +1,1 @@
+This folder stored the data that is scrapped. There will be a csv file for each day.
