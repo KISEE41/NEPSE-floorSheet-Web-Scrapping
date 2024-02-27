@@ -20,7 +20,7 @@ from argparser import argument_parser
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s | %(levelname)s : %(message)s",
-    filename=f"./logs/logs_for_{datetime.now()}.log",
+    filename=f"./logs/logs_for_{datetime.today().date()}.log",
     filemode="a",
 )
 

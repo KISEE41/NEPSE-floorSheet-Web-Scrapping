@@ -7,7 +7,7 @@ on:
     branches: ["master"]
   schedule:
     # Run everyday of the month except at saturday at 7PM
-    - cron: 0 19 * * 0-5
+    - cron: 0 4 * * 0-5
 
 jobs:
   build:
@@ -23,7 +23,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-          fetch-depth: 0
 
       # setting up python
       - name: Set up Python 3.10
