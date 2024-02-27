@@ -60,7 +60,7 @@ if __name__ == "__main__":
     # Initializing the argument parser
     args = argument_parser()
 
-    with open(f"./logs/logs_for_{datetime.today().date()}", "a") as log_file:
+    with open(f"./logs/logs_for_{datetime.today().date()}.log", "a") as log_file:
         log_file.write(
             "\n\n------------------------------------------------------------"
         )
@@ -187,7 +187,7 @@ if __name__ == "__main__":
 
     # Logs are in append mode
     # So leaving space to differentiate data from day to day
-    with open(f"./logs/logs_for_{datetime.today().date()}", "a") as log_file:
+    with open(f"./logs/logs_for_{datetime.today().date()}.log", "a") as log_file:
         log_file.write(
             "------------------------------------------------------------\n\n\n"
         )
