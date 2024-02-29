@@ -6,8 +6,8 @@ on:
   # pull_request:
   #   branches: ["master"]
   schedule:
-    # Run everyday of the month except at saturday at 7PM
-    - cron: 0 4 * * 0-5
+    # Run everyday of the month at 1AM in the morning except on saturday
+    - cron: 0 1 * * 0-5
 
 jobs:
   build:
