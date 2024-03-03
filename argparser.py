@@ -9,13 +9,13 @@ def argument_parser() -> str:
     """
     parse the argument sent via terminal.
 
-    Parameters:
-    -----------
-    None
+        Parameters:
+        -----------
+        None
 
-    Return:
-    ----------
-    str: return the stock name, that is provided via terminal. (If not provided returns the default value)
+        Return:
+        ----------
+        str: return the stock name, that is provided via terminal. (If not provided returns the default value)
     """
     # Initializing the  ArgumentParser
     parser = argparse.ArgumentParser(

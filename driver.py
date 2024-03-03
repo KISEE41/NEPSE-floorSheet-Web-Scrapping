@@ -17,13 +17,13 @@ def initialize_driver(user_agent: str) -> webdriver:
     """
     Function to initialize the driver.
 
-    Parameters:
-    -----------
-    user_agent (str):  user agent of the chrome browser
+        Parameters:
+        -----------
+        user_agent (str):  user agent of the chrome browser
 
-    Return:
-    ----------
-    driver: selenium chrome driver
+        Return:
+        ----------
+        driver: selenium chrome driver
     """
 
     # Options available and to be used
