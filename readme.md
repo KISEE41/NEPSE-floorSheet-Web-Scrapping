@@ -151,4 +151,4 @@ These future enhancements can improve the scalability, manageability, and analyt
 
 ## Conclusion
 
-Web scraping is a powerful technique for extracting data from websites, and it can be used for various purposes such as data analysis, research, and automation. By following the steps outlined in this documentation, you can effectively set up your environment, install dependencies, and execute the scraping script to fetch data from the ShareSansar floorsheet website.
+Web scraping is a powerful technique for extracting data from websites, and it can be used for various purposes such as data analysis, research, and automation. By following the steps outlined in this documentation, we can effectively set up our environment, install dependencies, and execute the scraping script to fetch data from the ShareSansar floorsheet website.
