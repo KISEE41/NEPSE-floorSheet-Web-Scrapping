@@ -49,6 +49,14 @@ df = pd.DataFrame(
 )
 
 
+def add_underscore_to_log_files():
+    with open(f"./logs/logs_for_{datetime.today().date()}.log", "a") as log_file:
+        log_file.write(
+            "\n\n------------------------------------------------------------"
+        )
+        
+
+
 def process_table_per_page(elements: WebElement) -> None:
     # Iterate through each row
     for row in elements:
@@ -60,11 +68,9 @@ if __name__ == "__main__":
     # Initializing the argument parser
     args = argument_parser()
 
-    with open(f"./logs/logs_for_{datetime.today().date()}.log", "a") as log_file:
-        log_file.write(
-            "\n\n------------------------------------------------------------"
-        )
-        logging.info(f"Log for the date: {datetime.now()}\n")
+    # Adding underscore for easy readability
+    add_underscore_to_log_files()
+    logging.info(f"Log for the date: {datetime.now()}\n")
 
     # Initializing the driver
     driver = initialize_driver(user_agent=user_agent)
@@ -187,7 +193,5 @@ if __name__ == "__main__":
 
     # Logs are in append mode
     # So leaving space to differentiate data from day to day
-    with open(f"./logs/logs_for_{datetime.today().date()}.log", "a") as log_file:
-        log_file.write(
-            "------------------------------------------------------------\n\n\n"
-        )
+    # Adding underscore for easy readability
+    add_underscore_to_log_files()
