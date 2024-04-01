@@ -1,0 +1,94 @@
+2024-03-19 01:38:34,335 | INFO : Log for the date: 2024-03-19 01:38:34.335942
+
+
+
+------------------------------------------------------------2024-03-19 01:38:34,336 | INFO : ====== WebDriver manager ======
+2024-03-19 01:38:36,831 | INFO : Get LATEST chromedriver version for google-chrome
+2024-03-19 01:38:36,833 | DEBUG : Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-03-19 01:38:36,894 | DEBUG : https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 4593
+2024-03-19 01:38:36,896 | INFO : Get LATEST chromedriver version for google-chrome
+2024-03-19 01:38:36,896 | DEBUG : Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-03-19 01:38:36,979 | DEBUG : https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 4593
+2024-03-19 01:38:36,980 | INFO : There is no [linux64] chromedriver "122.0.6261.128" for browser google-chrome "122.0.6261" in cache
+2024-03-19 01:38:36,980 | INFO : Get LATEST chromedriver version for google-chrome
+2024-03-19 01:38:36,981 | DEBUG : Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-03-19 01:38:37,019 | DEBUG : https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 4593
+2024-03-19 01:38:37,021 | DEBUG : Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-03-19 01:38:37,056 | DEBUG : https://googlechromelabs.github.io:443 "GET /chrome-for-testing/known-good-versions-with-downloads.json HTTP/1.1" 200 32700
+2024-03-19 01:38:37,069 | INFO : WebDriver version 122.0.6261.128 selected
+2024-03-19 01:38:37,070 | INFO : Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/122.0.6261.128/linux64/chromedriver-linux64.zip
+2024-03-19 01:38:37,070 | INFO : About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/122.0.6261.128/linux64/chromedriver-linux64.zip
+2024-03-19 01:38:37,071 | DEBUG : Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-03-19 01:38:37,122 | DEBUG : https://storage.googleapis.com:443 "GET /chrome-for-testing-public/122.0.6261.128/linux64/chromedriver-linux64.zip HTTP/1.1" 200 8598044
+2024-03-19 01:38:37,122 | INFO : Driver downloading response is 200
+2024-03-19 01:38:37,180 | INFO : Get LATEST chromedriver version for google-chrome
+2024-03-19 01:38:37,181 | DEBUG : Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-03-19 01:38:37,222 | DEBUG : https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 4593
+2024-03-19 01:38:37,338 | INFO : Driver has been saved in cache [/home/runner/.wdm/drivers/chromedriver/linux64/122.0.6261.128]
+2024-03-19 01:38:37,340 | DEBUG : Started executable: `/home/runner/.wdm/drivers/chromedriver/linux64/122.0.6261.128/chromedriver-linux64/chromedriver` in a child process with pid: 1823 using 0 to output -3
+2024-03-19 01:38:37,351 | DEBUG : POST http://localhost:52003/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'args': ['--headless=new', '--window-size=1920,1080', '--no-sandbox', 'disable-extensions', '--disable-logging', '--disable-dev-shm-usage', '--log-level=3', 'user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36']}}}}
+2024-03-19 01:38:37,351 | DEBUG : Starting new HTTP connection (1): localhost:52003
+2024-03-19 01:38:49,858 | DEBUG : http://localhost:52003 "POST /session HTTP/1.1" 200 0
+2024-03-19 01:38:49,858 | DEBUG : Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"122.0.6261.128","chrome":{"chromedriverVersion":"122.0.6261.128 (f18a44fedeb29764b2b5336c120fdd90ef1a3f5c-refs/branch-heads/6261@{#1057})","userDataDir":"/tmp/.org.chromium.Chromium.TdsjgI"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:46805"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"3e39913196ea4f6e29624c7d57570f4e"}} | headers=HTTPHeaderDict({'Content-Length': '850', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-03-19 01:38:49,859 | DEBUG : Finished Request
+2024-03-19 01:38:49,859 | INFO : Driver Initialized with user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-03-19 01:38:49,859 | DEBUG : Requsting the site: https://www.sharesansar.com/
+2024-03-19 01:38:49,859 | DEBUG : POST http://localhost:52003/session/3e39913196ea4f6e29624c7d57570f4e/url {'url': 'https://www.sharesansar.com/'}
+2024-03-19 01:38:52,181 | DEBUG : http://localhost:52003 "POST /session/3e39913196ea4f6e29624c7d57570f4e/url HTTP/1.1" 200 0
+2024-03-19 01:38:52,182 | DEBUG : Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-03-19 01:38:52,182 | DEBUG : Finished Request
+2024-03-19 01:38:52,182 | DEBUG : POST http://localhost:52003/session/3e39913196ea4f6e29624c7d57570f4e/element {'using': 'xpath', 'value': "//footer//a[@href='/floorsheet']"}
+2024-03-19 01:38:52,200 | DEBUG : http://localhost:52003 "POST /session/3e39913196ea4f6e29624c7d57570f4e/element HTTP/1.1" 200 0
+2024-03-19 01:38:52,200 | DEBUG : Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.F1BCB389F3C8E330248BBEA7F28E414D.d.38413EC1A7FD7926E31500500D802D5E.e.92"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-03-19 01:38:52,200 | DEBUG : Finished Request
+2024-03-19 01:38:52,200 | DEBUG : Clicking the floorsheet link
+2024-03-19 01:38:52,200 | DEBUG : POST http://localhost:52003/session/3e39913196ea4f6e29624c7d57570f4e/element/f.F1BCB389F3C8E330248BBEA7F28E414D.d.38413EC1A7FD7926E31500500D802D5E.e.92/click {}
+2024-03-19 01:38:52,215 | DEBUG : http://localhost:52003 "POST /session/3e39913196ea4f6e29624c7d57570f4e/element/f.F1BCB389F3C8E330248BBEA7F28E414D.d.38413EC1A7FD7926E31500500D802D5E.e.92/click HTTP/1.1" 400 0
+2024-03-19 01:38:52,215 | DEBUG : Remote response: status=400 | data={"value":{"error":"element not interactable","message":"element not interactable\n  (Session info: chrome=122.0.6261.128)","stacktrace":"#0 0x55e9ab76bf33 \u003Cunknown>\n#1 0x55e9ab463b37 \u003Cunknown>\n#2 0x55e9ab4afec8 \u003Cunknown>\n#3 0x55e9ab4a3d27 \u003Cunknown>\n#4 0x55e9ab4d0eb2 \u003Cunknown>\n#5 0x55e9ab4a36b8 \u003Cunknown>\n#6 0x55e9ab4d107e \u003Cunknown>\n#7 0x55e9ab4ef899 \u003Cunknown>\n#8 0x55e9ab4d0c53 \u003Cunknown>\n#9 0x55e9ab4a1db3 \u003Cunknown>\n#10 0x55e9ab4a277e \u003Cunknown>\n#11 0x55e9ab73186b \u003Cunknown>\n#12 0x55e9ab735885 \u003Cunknown>\n#13 0x55e9ab71f181 \u003Cunknown>\n#14 0x55e9ab736412 \u003Cunknown>\n#15 0x55e9ab70325f \u003Cunknown>\n#16 0x55e9ab75a528 \u003Cunknown>\n#17 0x55e9ab75a723 \u003Cunknown>\n#18 0x55e9ab76b0e4 \u003Cunknown>\n#19 0x7fd3bae94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '830', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-03-19 01:38:52,215 | DEBUG : Finished Request
+2024-03-19 01:38:52,215 | CRITICAL : Script run failed with error:
+ Message: element not interactable
+  (Session info: chrome=122.0.6261.128)
+Stacktrace:
+#0 0x55e9ab76bf33 <unknown>
+#1 0x55e9ab463b37 <unknown>
+#2 0x55e9ab4afec8 <unknown>
+#3 0x55e9ab4a3d27 <unknown>
+#4 0x55e9ab4d0eb2 <unknown>
+#5 0x55e9ab4a36b8 <unknown>
+#6 0x55e9ab4d107e <unknown>
+#7 0x55e9ab4ef899 <unknown>
+#8 0x55e9ab4d0c53 <unknown>
+#9 0x55e9ab4a1db3 <unknown>
+#10 0x55e9ab4a277e <unknown>
+#11 0x55e9ab73186b <unknown>
+#12 0x55e9ab735885 <unknown>
+#13 0x55e9ab71f181 <unknown>
+#14 0x55e9ab736412 <unknown>
+#15 0x55e9ab70325f <unknown>
+#16 0x55e9ab75a528 <unknown>
+#17 0x55e9ab75a723 <unknown>
+#18 0x55e9ab76b0e4 <unknown>
+#19 0x7fd3bae94ac3 <unknown>
+
+2024-03-19 01:38:52,215 | INFO : Closing the driver
+2024-03-19 01:39:02,226 | DEBUG : DELETE http://localhost:52003/session/3e39913196ea4f6e29624c7d57570f4e {}
+2024-03-19 01:39:02,277 | DEBUG : http://localhost:52003 "DELETE /session/3e39913196ea4f6e29624c7d57570f4e HTTP/1.1" 200 0
+2024-03-19 01:39:02,278 | DEBUG : Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-03-19 01:39:02,278 | DEBUG : Finished Request
+2024-03-19 01:39:02,295 | INFO : Storing the data in csv file: floorsheet_2024-03-19.csv
+2024-03-19 01:39:07,302 | INFO : Closing the driver
+2024-03-19 01:39:07,302 | DEBUG : DELETE http://localhost:52003/session/3e39913196ea4f6e29624c7d57570f4e {}
+2024-03-19 01:39:07,304 | DEBUG : Starting new HTTP connection (1): localhost:52003
+2024-03-19 01:39:07,305 | DEBUG : Incremented Retry for (url='/session/3e39913196ea4f6e29624c7d57570f4e'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-03-19 01:39:07,305 | WARNING : Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4ed11a5330>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/3e39913196ea4f6e29624c7d57570f4e
+2024-03-19 01:39:07,305 | DEBUG : Starting new HTTP connection (2): localhost:52003
+2024-03-19 01:39:07,305 | DEBUG : Incremented Retry for (url='/session/3e39913196ea4f6e29624c7d57570f4e'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-03-19 01:39:07,305 | WARNING : Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4ed11a5900>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/3e39913196ea4f6e29624c7d57570f4e
+2024-03-19 01:39:07,305 | DEBUG : Starting new HTTP connection (3): localhost:52003
+2024-03-19 01:39:07,306 | DEBUG : Incremented Retry for (url='/session/3e39913196ea4f6e29624c7d57570f4e'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-03-19 01:39:07,306 | WARNING : Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4ed11a53c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/3e39913196ea4f6e29624c7d57570f4e
+2024-03-19 01:39:07,306 | DEBUG : Starting new HTTP connection (4): localhost:52003
+------------------------------------------------------------
+
+
