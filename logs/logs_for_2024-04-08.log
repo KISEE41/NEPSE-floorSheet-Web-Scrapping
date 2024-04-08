@@ -1,0 +1,132 @@
+
+
+------------------------------------------------------------2024-04-08 01:41:18,311 | INFO : Log for the date: 2024-04-08 01:41:18.311625
+
+2024-04-08 01:41:18,311 | INFO : ====== WebDriver manager ======
+2024-04-08 01:41:18,466 | INFO : Get LATEST chromedriver version for google-chrome
+2024-04-08 01:41:18,468 | DEBUG : Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-04-08 01:41:18,520 | DEBUG : https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 4942
+2024-04-08 01:41:18,521 | INFO : Get LATEST chromedriver version for google-chrome
+2024-04-08 01:41:18,522 | DEBUG : Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-04-08 01:41:18,558 | DEBUG : https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 4942
+2024-04-08 01:41:18,560 | INFO : There is no [linux64] chromedriver "123.0.6312.105" for browser google-chrome "123.0.6312" in cache
+2024-04-08 01:41:18,560 | INFO : Get LATEST chromedriver version for google-chrome
+2024-04-08 01:41:18,560 | DEBUG : Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-04-08 01:41:18,602 | DEBUG : https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 4942
+2024-04-08 01:41:18,604 | DEBUG : Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-04-08 01:41:18,639 | DEBUG : https://googlechromelabs.github.io:443 "GET /chrome-for-testing/known-good-versions-with-downloads.json HTTP/1.1" 200 35819
+2024-04-08 01:41:18,652 | INFO : WebDriver version 123.0.6312.105 selected
+2024-04-08 01:41:18,653 | INFO : Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.105/linux64/chromedriver-linux64.zip
+2024-04-08 01:41:18,654 | INFO : About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.105/linux64/chromedriver-linux64.zip
+2024-04-08 01:41:18,654 | DEBUG : Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-04-08 01:41:18,745 | DEBUG : https://storage.googleapis.com:443 "GET /chrome-for-testing-public/123.0.6312.105/linux64/chromedriver-linux64.zip HTTP/1.1" 200 8636471
+2024-04-08 01:41:18,745 | INFO : Driver downloading response is 200
+2024-04-08 01:41:18,825 | INFO : Get LATEST chromedriver version for google-chrome
+2024-04-08 01:41:18,826 | DEBUG : Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-04-08 01:41:18,872 | DEBUG : https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 4942
+2024-04-08 01:41:18,990 | INFO : Driver has been saved in cache [/home/runner/.wdm/drivers/chromedriver/linux64/123.0.6312.105]
+2024-04-08 01:41:18,992 | DEBUG : Started executable: `/home/runner/.wdm/drivers/chromedriver/linux64/123.0.6312.105/chromedriver-linux64/chromedriver` in a child process with pid: 1833 using 0 to output -3
+2024-04-08 01:41:19,003 | DEBUG : POST http://localhost:57563/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'args': ['--headless=new', '--window-size=1920,1080', '--no-sandbox', 'disable-extensions', '--disable-logging', '--disable-dev-shm-usage', '--log-level=3', 'user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36']}}}}
+2024-04-08 01:41:19,003 | DEBUG : Starting new HTTP connection (1): localhost:57563
+2024-04-08 01:41:21,381 | DEBUG : http://localhost:57563 "POST /session HTTP/1.1" 200 0
+2024-04-08 01:41:21,381 | DEBUG : Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"123.0.6312.105","chrome":{"chromedriverVersion":"123.0.6312.105 (399174dbe6eff0f59de9a6096129c0c827002b3a-refs/branch-heads/6312@{#761})","userDataDir":"/tmp/.org.chromium.Chromium.ZKXfFg"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:38009"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"767eeb88d18d82a6dcbafc038e3cd77e"}} | headers=HTTPHeaderDict({'Content-Length': '849', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:21,382 | DEBUG : Finished Request
+2024-04-08 01:41:21,382 | INFO : Driver Initialized with user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-04-08 01:41:21,382 | DEBUG : Requsting the site: https://www.sharesansar.com/
+2024-04-08 01:41:21,382 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/url {'url': 'https://www.sharesansar.com/'}
+2024-04-08 01:41:23,351 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/url HTTP/1.1" 200 0
+2024-04-08 01:41:23,352 | DEBUG : Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:23,352 | DEBUG : Finished Request
+2024-04-08 01:41:23,352 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//footer//a[@href='/floorsheet']"}
+2024-04-08 01:41:23,368 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 200 0
+2024-04-08 01:41:23,368 | DEBUG : Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.5B789E532428B8899B94704F00FACC5B.d.47CE98ED307405A4E0F481B1C705A5AC.e.100"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:23,368 | DEBUG : Finished Request
+2024-04-08 01:41:23,368 | DEBUG : Clicking the floorsheet link
+2024-04-08 01:41:23,368 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element/f.5B789E532428B8899B94704F00FACC5B.d.47CE98ED307405A4E0F481B1C705A5AC.e.100/click {}
+2024-04-08 01:41:23,444 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element/f.5B789E532428B8899B94704F00FACC5B.d.47CE98ED307405A4E0F481B1C705A5AC.e.100/click HTTP/1.1" 200 0
+2024-04-08 01:41:23,445 | DEBUG : Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:23,445 | DEBUG : Finished Request
+2024-04-08 01:41:28,446 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//span[@class='selection']"}
+2024-04-08 01:41:28,459 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 404 0
+2024-04-08 01:41:28,459 | DEBUG : Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='selection']\"}\n  (Session info: chrome=123.0.6312.105)","stacktrace":"#0 0x5641cc4f3873 \u003Cunknown>\n#1 0x5641cc1e98c6 \u003Cunknown>\n#2 0x5641cc234618 \u003Cunknown>\n#3 0x5641cc2346d1 \u003Cunknown>\n#4 0x5641cc277744 \u003Cunknown>\n#5 0x5641cc2565cd \u003Cunknown>\n#6 0x5641cc274c19 \u003Cunknown>\n#7 0x5641cc256343 \u003Cunknown>\n#8 0x5641cc227593 \u003Cunknown>\n#9 0x5641cc227f5e \u003Cunknown>\n#10 0x5641cc4b785b \u003Cunknown>\n#11 0x5641cc4bb7b5 \u003Cunknown>\n#12 0x5641cc4a5581 \u003Cunknown>\n#13 0x5641cc4bc342 \u003Cunknown>\n#14 0x5641cc48a88f \u003Cunknown>\n#15 0x5641cc4e2738 \u003Cunknown>\n#16 0x5641cc4e290b \u003Cunknown>\n#17 0x5641cc4f29c4 \u003Cunknown>\n#18 0x7f3c4de94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '871', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:28,459 | DEBUG : Finished Request
+2024-04-08 01:41:28,960 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//span[@class='selection']"}
+2024-04-08 01:41:28,968 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 404 0
+2024-04-08 01:41:28,968 | DEBUG : Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='selection']\"}\n  (Session info: chrome=123.0.6312.105)","stacktrace":"#0 0x5641cc4f3873 \u003Cunknown>\n#1 0x5641cc1e98c6 \u003Cunknown>\n#2 0x5641cc234618 \u003Cunknown>\n#3 0x5641cc2346d1 \u003Cunknown>\n#4 0x5641cc277744 \u003Cunknown>\n#5 0x5641cc2565cd \u003Cunknown>\n#6 0x5641cc274c19 \u003Cunknown>\n#7 0x5641cc256343 \u003Cunknown>\n#8 0x5641cc227593 \u003Cunknown>\n#9 0x5641cc227f5e \u003Cunknown>\n#10 0x5641cc4b785b \u003Cunknown>\n#11 0x5641cc4bb7b5 \u003Cunknown>\n#12 0x5641cc4a5581 \u003Cunknown>\n#13 0x5641cc4bc342 \u003Cunknown>\n#14 0x5641cc48a88f \u003Cunknown>\n#15 0x5641cc4e2738 \u003Cunknown>\n#16 0x5641cc4e290b \u003Cunknown>\n#17 0x5641cc4f29c4 \u003Cunknown>\n#18 0x7f3c4de94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '871', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:28,968 | DEBUG : Finished Request
+2024-04-08 01:41:29,469 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//span[@class='selection']"}
+2024-04-08 01:41:29,477 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 404 0
+2024-04-08 01:41:29,477 | DEBUG : Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='selection']\"}\n  (Session info: chrome=123.0.6312.105)","stacktrace":"#0 0x5641cc4f3873 \u003Cunknown>\n#1 0x5641cc1e98c6 \u003Cunknown>\n#2 0x5641cc234618 \u003Cunknown>\n#3 0x5641cc2346d1 \u003Cunknown>\n#4 0x5641cc277744 \u003Cunknown>\n#5 0x5641cc2565cd \u003Cunknown>\n#6 0x5641cc274c19 \u003Cunknown>\n#7 0x5641cc256343 \u003Cunknown>\n#8 0x5641cc227593 \u003Cunknown>\n#9 0x5641cc227f5e \u003Cunknown>\n#10 0x5641cc4b785b \u003Cunknown>\n#11 0x5641cc4bb7b5 \u003Cunknown>\n#12 0x5641cc4a5581 \u003Cunknown>\n#13 0x5641cc4bc342 \u003Cunknown>\n#14 0x5641cc48a88f \u003Cunknown>\n#15 0x5641cc4e2738 \u003Cunknown>\n#16 0x5641cc4e290b \u003Cunknown>\n#17 0x5641cc4f29c4 \u003Cunknown>\n#18 0x7f3c4de94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '871', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:29,478 | DEBUG : Finished Request
+2024-04-08 01:41:29,978 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//span[@class='selection']"}
+2024-04-08 01:41:29,987 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 404 0
+2024-04-08 01:41:29,987 | DEBUG : Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='selection']\"}\n  (Session info: chrome=123.0.6312.105)","stacktrace":"#0 0x5641cc4f3873 \u003Cunknown>\n#1 0x5641cc1e98c6 \u003Cunknown>\n#2 0x5641cc234618 \u003Cunknown>\n#3 0x5641cc2346d1 \u003Cunknown>\n#4 0x5641cc277744 \u003Cunknown>\n#5 0x5641cc2565cd \u003Cunknown>\n#6 0x5641cc274c19 \u003Cunknown>\n#7 0x5641cc256343 \u003Cunknown>\n#8 0x5641cc227593 \u003Cunknown>\n#9 0x5641cc227f5e \u003Cunknown>\n#10 0x5641cc4b785b \u003Cunknown>\n#11 0x5641cc4bb7b5 \u003Cunknown>\n#12 0x5641cc4a5581 \u003Cunknown>\n#13 0x5641cc4bc342 \u003Cunknown>\n#14 0x5641cc48a88f \u003Cunknown>\n#15 0x5641cc4e2738 \u003Cunknown>\n#16 0x5641cc4e290b \u003Cunknown>\n#17 0x5641cc4f29c4 \u003Cunknown>\n#18 0x7f3c4de94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '871', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:29,987 | DEBUG : Finished Request
+2024-04-08 01:41:30,488 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//span[@class='selection']"}
+2024-04-08 01:41:30,496 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 404 0
+2024-04-08 01:41:30,496 | DEBUG : Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='selection']\"}\n  (Session info: chrome=123.0.6312.105)","stacktrace":"#0 0x5641cc4f3873 \u003Cunknown>\n#1 0x5641cc1e98c6 \u003Cunknown>\n#2 0x5641cc234618 \u003Cunknown>\n#3 0x5641cc2346d1 \u003Cunknown>\n#4 0x5641cc277744 \u003Cunknown>\n#5 0x5641cc2565cd \u003Cunknown>\n#6 0x5641cc274c19 \u003Cunknown>\n#7 0x5641cc256343 \u003Cunknown>\n#8 0x5641cc227593 \u003Cunknown>\n#9 0x5641cc227f5e \u003Cunknown>\n#10 0x5641cc4b785b \u003Cunknown>\n#11 0x5641cc4bb7b5 \u003Cunknown>\n#12 0x5641cc4a5581 \u003Cunknown>\n#13 0x5641cc4bc342 \u003Cunknown>\n#14 0x5641cc48a88f \u003Cunknown>\n#15 0x5641cc4e2738 \u003Cunknown>\n#16 0x5641cc4e290b \u003Cunknown>\n#17 0x5641cc4f29c4 \u003Cunknown>\n#18 0x7f3c4de94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '871', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:30,496 | DEBUG : Finished Request
+2024-04-08 01:41:30,997 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//span[@class='selection']"}
+2024-04-08 01:41:31,006 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 404 0
+2024-04-08 01:41:31,006 | DEBUG : Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='selection']\"}\n  (Session info: chrome=123.0.6312.105)","stacktrace":"#0 0x5641cc4f3873 \u003Cunknown>\n#1 0x5641cc1e98c6 \u003Cunknown>\n#2 0x5641cc234618 \u003Cunknown>\n#3 0x5641cc2346d1 \u003Cunknown>\n#4 0x5641cc277744 \u003Cunknown>\n#5 0x5641cc2565cd \u003Cunknown>\n#6 0x5641cc274c19 \u003Cunknown>\n#7 0x5641cc256343 \u003Cunknown>\n#8 0x5641cc227593 \u003Cunknown>\n#9 0x5641cc227f5e \u003Cunknown>\n#10 0x5641cc4b785b \u003Cunknown>\n#11 0x5641cc4bb7b5 \u003Cunknown>\n#12 0x5641cc4a5581 \u003Cunknown>\n#13 0x5641cc4bc342 \u003Cunknown>\n#14 0x5641cc48a88f \u003Cunknown>\n#15 0x5641cc4e2738 \u003Cunknown>\n#16 0x5641cc4e290b \u003Cunknown>\n#17 0x5641cc4f29c4 \u003Cunknown>\n#18 0x7f3c4de94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '871', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:31,006 | DEBUG : Finished Request
+2024-04-08 01:41:31,507 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//span[@class='selection']"}
+2024-04-08 01:41:31,516 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 404 0
+2024-04-08 01:41:31,516 | DEBUG : Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='selection']\"}\n  (Session info: chrome=123.0.6312.105)","stacktrace":"#0 0x5641cc4f3873 \u003Cunknown>\n#1 0x5641cc1e98c6 \u003Cunknown>\n#2 0x5641cc234618 \u003Cunknown>\n#3 0x5641cc2346d1 \u003Cunknown>\n#4 0x5641cc277744 \u003Cunknown>\n#5 0x5641cc2565cd \u003Cunknown>\n#6 0x5641cc274c19 \u003Cunknown>\n#7 0x5641cc256343 \u003Cunknown>\n#8 0x5641cc227593 \u003Cunknown>\n#9 0x5641cc227f5e \u003Cunknown>\n#10 0x5641cc4b785b \u003Cunknown>\n#11 0x5641cc4bb7b5 \u003Cunknown>\n#12 0x5641cc4a5581 \u003Cunknown>\n#13 0x5641cc4bc342 \u003Cunknown>\n#14 0x5641cc48a88f \u003Cunknown>\n#15 0x5641cc4e2738 \u003Cunknown>\n#16 0x5641cc4e290b \u003Cunknown>\n#17 0x5641cc4f29c4 \u003Cunknown>\n#18 0x7f3c4de94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '871', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:31,516 | DEBUG : Finished Request
+2024-04-08 01:41:32,017 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//span[@class='selection']"}
+2024-04-08 01:41:32,026 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 404 0
+2024-04-08 01:41:32,026 | DEBUG : Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='selection']\"}\n  (Session info: chrome=123.0.6312.105)","stacktrace":"#0 0x5641cc4f3873 \u003Cunknown>\n#1 0x5641cc1e98c6 \u003Cunknown>\n#2 0x5641cc234618 \u003Cunknown>\n#3 0x5641cc2346d1 \u003Cunknown>\n#4 0x5641cc277744 \u003Cunknown>\n#5 0x5641cc2565cd \u003Cunknown>\n#6 0x5641cc274c19 \u003Cunknown>\n#7 0x5641cc256343 \u003Cunknown>\n#8 0x5641cc227593 \u003Cunknown>\n#9 0x5641cc227f5e \u003Cunknown>\n#10 0x5641cc4b785b \u003Cunknown>\n#11 0x5641cc4bb7b5 \u003Cunknown>\n#12 0x5641cc4a5581 \u003Cunknown>\n#13 0x5641cc4bc342 \u003Cunknown>\n#14 0x5641cc48a88f \u003Cunknown>\n#15 0x5641cc4e2738 \u003Cunknown>\n#16 0x5641cc4e290b \u003Cunknown>\n#17 0x5641cc4f29c4 \u003Cunknown>\n#18 0x7f3c4de94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '871', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:32,026 | DEBUG : Finished Request
+2024-04-08 01:41:32,527 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//span[@class='selection']"}
+2024-04-08 01:41:32,535 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 404 0
+2024-04-08 01:41:32,535 | DEBUG : Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='selection']\"}\n  (Session info: chrome=123.0.6312.105)","stacktrace":"#0 0x5641cc4f3873 \u003Cunknown>\n#1 0x5641cc1e98c6 \u003Cunknown>\n#2 0x5641cc234618 \u003Cunknown>\n#3 0x5641cc2346d1 \u003Cunknown>\n#4 0x5641cc277744 \u003Cunknown>\n#5 0x5641cc2565cd \u003Cunknown>\n#6 0x5641cc274c19 \u003Cunknown>\n#7 0x5641cc256343 \u003Cunknown>\n#8 0x5641cc227593 \u003Cunknown>\n#9 0x5641cc227f5e \u003Cunknown>\n#10 0x5641cc4b785b \u003Cunknown>\n#11 0x5641cc4bb7b5 \u003Cunknown>\n#12 0x5641cc4a5581 \u003Cunknown>\n#13 0x5641cc4bc342 \u003Cunknown>\n#14 0x5641cc48a88f \u003Cunknown>\n#15 0x5641cc4e2738 \u003Cunknown>\n#16 0x5641cc4e290b \u003Cunknown>\n#17 0x5641cc4f29c4 \u003Cunknown>\n#18 0x7f3c4de94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '871', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:32,535 | DEBUG : Finished Request
+2024-04-08 01:41:33,036 | DEBUG : POST http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e/element {'using': 'xpath', 'value': "//span[@class='selection']"}
+2024-04-08 01:41:33,044 | DEBUG : http://localhost:57563 "POST /session/767eeb88d18d82a6dcbafc038e3cd77e/element HTTP/1.1" 404 0
+2024-04-08 01:41:33,045 | DEBUG : Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class='selection']\"}\n  (Session info: chrome=123.0.6312.105)","stacktrace":"#0 0x5641cc4f3873 \u003Cunknown>\n#1 0x5641cc1e98c6 \u003Cunknown>\n#2 0x5641cc234618 \u003Cunknown>\n#3 0x5641cc2346d1 \u003Cunknown>\n#4 0x5641cc277744 \u003Cunknown>\n#5 0x5641cc2565cd \u003Cunknown>\n#6 0x5641cc274c19 \u003Cunknown>\n#7 0x5641cc256343 \u003Cunknown>\n#8 0x5641cc227593 \u003Cunknown>\n#9 0x5641cc227f5e \u003Cunknown>\n#10 0x5641cc4b785b \u003Cunknown>\n#11 0x5641cc4bb7b5 \u003Cunknown>\n#12 0x5641cc4a5581 \u003Cunknown>\n#13 0x5641cc4bc342 \u003Cunknown>\n#14 0x5641cc48a88f \u003Cunknown>\n#15 0x5641cc4e2738 \u003Cunknown>\n#16 0x5641cc4e290b \u003Cunknown>\n#17 0x5641cc4f29c4 \u003Cunknown>\n#18 0x7f3c4de94ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '871', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:33,045 | DEBUG : Finished Request
+2024-04-08 01:41:33,545 | CRITICAL : Script run failed with error:
+ Message: 
+Stacktrace:
+#0 0x5641cc4f3873 <unknown>
+#1 0x5641cc1e98c6 <unknown>
+#2 0x5641cc234618 <unknown>
+#3 0x5641cc2346d1 <unknown>
+#4 0x5641cc277744 <unknown>
+#5 0x5641cc2565cd <unknown>
+#6 0x5641cc274c19 <unknown>
+#7 0x5641cc256343 <unknown>
+#8 0x5641cc227593 <unknown>
+#9 0x5641cc227f5e <unknown>
+#10 0x5641cc4b785b <unknown>
+#11 0x5641cc4bb7b5 <unknown>
+#12 0x5641cc4a5581 <unknown>
+#13 0x5641cc4bc342 <unknown>
+#14 0x5641cc48a88f <unknown>
+#15 0x5641cc4e2738 <unknown>
+#16 0x5641cc4e290b <unknown>
+#17 0x5641cc4f29c4 <unknown>
+#18 0x7f3c4de94ac3 <unknown>
+
+2024-04-08 01:41:33,545 | INFO : Closing the driver
+2024-04-08 01:41:43,556 | DEBUG : DELETE http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e {}
+2024-04-08 01:41:43,607 | DEBUG : http://localhost:57563 "DELETE /session/767eeb88d18d82a6dcbafc038e3cd77e HTTP/1.1" 200 0
+2024-04-08 01:41:43,607 | DEBUG : Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-08 01:41:43,607 | DEBUG : Finished Request
+2024-04-08 01:41:43,624 | INFO : Storing the data in csv file: floorsheet_2024-04-08.csv
+2024-04-08 01:41:48,628 | INFO : Closing the driver
+2024-04-08 01:41:48,628 | DEBUG : DELETE http://localhost:57563/session/767eeb88d18d82a6dcbafc038e3cd77e {}
+2024-04-08 01:41:48,628 | DEBUG : Starting new HTTP connection (1): localhost:57563
+2024-04-08 01:41:48,629 | DEBUG : Incremented Retry for (url='/session/767eeb88d18d82a6dcbafc038e3cd77e'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-04-08 01:41:48,629 | WARNING : Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcad0f29120>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/767eeb88d18d82a6dcbafc038e3cd77e
+2024-04-08 01:41:48,629 | DEBUG : Starting new HTTP connection (2): localhost:57563
+2024-04-08 01:41:48,630 | DEBUG : Incremented Retry for (url='/session/767eeb88d18d82a6dcbafc038e3cd77e'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-04-08 01:41:48,630 | WARNING : Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcad0f29960>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/767eeb88d18d82a6dcbafc038e3cd77e
+2024-04-08 01:41:48,630 | DEBUG : Starting new HTTP connection (3): localhost:57563
+2024-04-08 01:41:48,630 | DEBUG : Incremented Retry for (url='/session/767eeb88d18d82a6dcbafc038e3cd77e'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-04-08 01:41:48,630 | WARNING : Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fcad0f29ab0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/767eeb88d18d82a6dcbafc038e3cd77e
+2024-04-08 01:41:48,630 | DEBUG : Starting new HTTP connection (4): localhost:57563
+
+
+------------------------------------------------------------
