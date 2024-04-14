@@ -1,13 +1,13 @@
 name: Web Scrapping
 
-on:
+# on:
   # push:
   #   branches: ["master"]
   # pull_request:
   #   branches: ["master"]
-  schedule:
+  # schedule:
     # Run everyday of the month at 1AM in the morning except on saturday
-    - cron: 0 1 * * 0-5
+    # - cron: 0 1 * * 0-5
 
 jobs:
   build:
